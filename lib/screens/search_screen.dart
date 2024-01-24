@@ -212,7 +212,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           mainAxisSpacing: 20,
                           childAspectRatio: mediaQuery.size.width / (mediaQuery.size.height / 1.6),
                         ),
-                        itemCount: 6,
+                        itemCount: 12,
                         itemBuilder: (context, index) {
                           return const BlankRestaurantCard();
                         },

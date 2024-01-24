@@ -49,45 +49,47 @@ class BlankRestaurantCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    return Column(
-      children: [
-        Card(
-          elevation: 6,
-          child: Container(
-            width: mediaQuery.size.width * 0.7,
-            height: 80,
-            padding: const EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              gradient: const LinearGradient(
-                colors: [
-                  Pallete.restaurantCardGradientColor,
-                  Pallete.darkBackgroundColor,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Card(
+            elevation: 6,
+            child: Container(
+              width: mediaQuery.size.width * 0.7,
+              height: 80,
+              padding: const EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                gradient: const LinearGradient(
+                  colors: [
+                    Pallete.restaurantCardGradientColor,
+                    Pallete.darkBackgroundColor,
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
               ),
             ),
           ),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                "Restaurant Name",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Pallete.specialsNearYouColor),
-              ),
-              Text(
-                "Location",
-                style: TextStyle(fontSize: 10, color: Pallete.specialsNearYouColor),
-              ),
-            ],
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  "Restaurant Name",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Pallete.specialsNearYouColor),
+                ),
+                Text(
+                  "Location",
+                  style: TextStyle(fontSize: 10, color: Pallete.specialsNearYouColor),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
