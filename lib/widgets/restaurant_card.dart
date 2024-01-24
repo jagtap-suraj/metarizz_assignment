@@ -15,7 +15,6 @@ class RestaurantCard extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          
           gradient: const LinearGradient(
             colors: [
               Pallete.restaurantCardGradientColor,
@@ -49,28 +48,24 @@ class BlankRestaurantCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     final mediaQuery = MediaQuery.of(context);
     return Column(
       children: [
         Card(
           elevation: 6,
-          child: Expanded(
-            child: Container(
-              width: mediaQuery.size.width * 0.7,
-              
-              height: 80,
-              padding: const EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                gradient: const LinearGradient(
-                  colors: [
-                    Pallete.restaurantCardGradientColor,
-                    Pallete.darkBackgroundColor,
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
+          child: Container(
+            width: mediaQuery.size.width * 0.7,
+            height: 80,
+            padding: const EdgeInsets.all(8.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              gradient: const LinearGradient(
+                colors: [
+                  Pallete.restaurantCardGradientColor,
+                  Pallete.darkBackgroundColor,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
             ),
           ),

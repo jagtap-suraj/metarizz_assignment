@@ -204,13 +204,15 @@ class _SearchScreenState extends State<SearchScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: LayoutBuilder(
                       builder: (context, constraints) => GridView.builder(
+                        //shrinkWrap: true,
+                        //physics: const NeverScrollableScrollPhysics(),
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,
                           crossAxisSpacing: 10,
                           mainAxisSpacing: 20,
                           childAspectRatio: mediaQuery.size.width / (mediaQuery.size.height / 1.6),
                         ),
-                        itemCount: 12,
+                        itemCount: 6,
                         itemBuilder: (context, index) {
                           return const BlankRestaurantCard();
                         },
